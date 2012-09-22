@@ -9,4 +9,9 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
+    = render 'layouts/navigation'
+    p class="notice"
+     = notice
+    p class="alert"
+      = alert
     = yield
