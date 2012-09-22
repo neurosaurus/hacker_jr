@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922220807) do
+ActiveRecord::Schema.define(:version => 20120922222158) do
+
+  create_table "employees", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "employer_id"
+    t.string   "employer_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "links", :force => true do |t|
     t.integer  "user_id"
