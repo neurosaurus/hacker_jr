@@ -1,6 +1,16 @@
 HackerJr::Application.routes.draw do
   devise_for :users
 
+
+  root to: 'pages#home'
+  
+  %w[contact about].each do |page|
+    get page, controller: "pages", action: page
+  end
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
