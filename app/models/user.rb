@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :employments
   has_many :schools, through: :enrollments
   has_many :company_employers, through: :employments, source: :employmentable, source_type: "Company"
-  has_many :school_employers, through: :employments, source: :employmentable, source_type: "School"
+  has_many :school_employers, through: :employments, source: :employmentable, source_type: "School", inverse_of: :employees
   has_many :links
   has_many :skills
 end
