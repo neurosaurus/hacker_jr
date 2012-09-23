@@ -8,7 +8,8 @@ HackerJr::Application.routes.draw do
     get page, controller: "pages", action: page
   end
 
-
+  match "/:school" => "schools#show", as: "school"
+  resources :schools, except: :show
 
 
   # The priority is based upon order of creation:
