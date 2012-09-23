@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922222857) do
+ActiveRecord::Schema.define(:version => 20120923005254) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -20,12 +20,19 @@ ActiveRecord::Schema.define(:version => 20120922222857) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "employees", :force => true do |t|
+  create_table "employments", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "employer_id"
-    t.string   "employer_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "employmentable_id"
+    t.string   "employmentable_type"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  create_table "enrollments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "school_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "links", :force => true do |t|
@@ -49,16 +56,6 @@ ActiveRecord::Schema.define(:version => 20120922222857) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "students", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "school_id"
-    t.datetime "birthdate"
-    t.string   "sex"
-    t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -73,6 +70,9 @@ ActiveRecord::Schema.define(:version => 20120922222857) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "sex"
+    t.text     "bio"
+    t.datetime "birthdate"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
