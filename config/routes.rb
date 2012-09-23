@@ -13,6 +13,7 @@ HackerJr::Application.routes.draw do
   match "/:school" => "schools#show", as: "school"
   resources :schools, except: :show
 
+  match "/:school/students" => "students#index", as: "students"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
