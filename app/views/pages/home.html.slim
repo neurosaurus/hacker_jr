@@ -1,33 +1,48 @@
 div class="row"
-  div class="twelve columns" id="featuredContent"
-    div class="row"
-      div class="twelve columns"
-        img src="http://placehold.it/940x360"
-    div class="row"
-      div class="twelve columns"
-        img src="http://placehold.it/940x360"
+  div class="twelve columns"
+    div class="panel"
+      div class="row"
+        div class="twelve columns" id="featuredContent"
+          div class="row"
+            div class="twelve columns"
+              = image_tag("Companylogos1.png")
+          div class="row"
+            div class="twelve columns"
+              = image_tag("Companylogos2.png")
+          div class="row"
+            div class="twelve columns"
+              = image_tag("Companylogos3.png")
+
 div class="row"
   div class="four columns"
-   img src="http://placehold.it/400x300"
+    = image_tag("home_page_photo.jpeg")
   div class="eight columns"
-    h4 this is a section
     div class="row"
       div class="six columns"
-        p Art party qui laboris, forage aliqua voluptate blog beard whatever nostrud cardigan portland skateboard ennui. Consequat brooklyn dolore, chillwave cillum veniam retro incididunt occupy ethnic fap polaroid. Dreamcatcher food truck cillum delectus fanny pack, tumblr commodo mixtape scenester proident non.
+        div class="panel radius"
+          h4 Hacker Jr. is a platform to help companies recruit great junior developers by providing them access to vetted graduates of reputed developer schools.
       div class="six columns"
-        p Brunch excepteur ullamco, fanny pack officia sapiente organic art party sunt lo-fi quinoa. Quinoa consectetur pork belly, keytar mumblecore wayfarers vice odio letterpress. Nisi artisan helvetica aliqua twee, stumptown seitan put a bird on it wayfarers keffiyeh qui laboris skateboard assumenda. Reprehenderit kogi dolor hoodie cred in ea.
+        h4 The best way to find and hire junior developers
+        ul
+          li
+            h5 Guaranteed high quality of incoming hires
+          li
+            h5 Ease of access to a large pool of talent
 div class="row"
   div class="eight columns"
-    h4 this is a content section
-    p Wes anderson carles you probably haven't heard of them, freegan Austin chillwave pour-over ut. Letterpress sartorial readymade cred, beard selvage semiotics yr minim cupidatat small batch messenger bag wayfarers. Ethnic lo-fi marfa, quinoa kale chips Austin kogi excepteur. 
-    p Proident photo booth duis stumptown, authentic velit readymade mcsweeney's gluten-free nisi ut tattooed dolore ethnic jean shorts. DIY exercitation high life officia chambray leggings, eiusmod pop-up gluten-free. Etsy fap quis stumptown, chambray irony cupidatat high life jean shorts tempor nisi elit eiusmod vegan swag.
+    h4 Hire a Junior Hacker
+    p There is high demand for developers in this competitive market because big companies are growing bigger and new companies need to grow big. Companies often hire poor talent and realize it late because there is no means to search for vetted talent in an easy, efficient way. It is very costly and time consuming for you to find the perfect fit. 
+    p Start using Hacker Jr. now to save time and money and get a perfect fit for a junior developer.
   div class="four columns"
-    img src="http://placehold.it/400x300"
+    = image_tag("home_page_2.jpeg")
 
 javascript:
    $(window).load(function() {
        $('#featuredContent').orbit({ 
           directionalNav: false,
-          advanceSpeed: 3000
+          advanceSpeed: 3000,
+          captions: true,
+          captionAnimation: 'fade',
+          captionAnimationSpeed: 200
         });
    });
