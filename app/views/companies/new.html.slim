@@ -1,0 +1,21 @@
+h1 Hello World
+
+= form_for @company do |f|
+  - if @company.errors.any?
+    div.error_messages
+	  h2 Form is invalid
+	  ul
+	    - for message in @company.errors.full_messages
+	      li = message
+	
+  = render :partial => "employees_form", :locals => { :f => f }
+
+  h3 Company Info
+
+  = f.label :name
+  = f.text_field :name
+
+  = f.label :description
+  = f.text_field :description
+
+  = f.submit "Submit"

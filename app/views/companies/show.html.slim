@@ -1,0 +1,11 @@
+h1 Shark Week?
+
+h3 Company
+= @company.name
+br
+h3 Description
+= @company.description
+br
+h3 Employees
+- @employees.each do |employee|
+  = employee.email
