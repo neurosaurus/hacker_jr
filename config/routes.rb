@@ -7,6 +7,8 @@ HackerJr::Application.routes.draw do
   %w[contact about].each do |page|
     get page, controller: "pages", action: page
   end
+  
+  resources :companies
 
 
 
