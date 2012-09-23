@@ -1,16 +1,20 @@
-ul class="nav-bar"
-  li
-    = link_to "URLong", root_path
-  - if user_signed_in?
-    li
-      = link_to "Edit Profile", edit_user_registration_path
-    li
-      = link_to "Logout", destroy_user_session_path, method: :delete
-  - else
-    li
-      = link_to "Sign Up", new_user_registration_path
-    li
-      = link_to "Sign In", new_user_session_path
+
+div class="row"
+  div class="three columns"
+    img src="http://placehold.it/400x100&text=Logo"
+  div class="nine columns"
+    ul class="nav-bar right"
+      - if user_signed_in?
+        li
+          = link_to "Edit Profile", edit_user_registration_path
+        li
+          = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        li
+          = link_to "Sign Up", new_user_registration_path
+        li
+          = link_to "Sign In", new_user_session_path
 
 javascript:
   $(document).foundationNavigation();
+  $(document).foundationTopBar();

@@ -15,7 +15,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'quiet_assets'
   gem 'slim-rails'
-  gem 'zurb-foundation', '~> 3.0.9'
+  gem 'zurb-foundation', '~> 3.1.1'
   gem 'compass-rails', '~> 1.0.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
