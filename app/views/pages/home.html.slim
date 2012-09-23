@@ -1,2 +1,33 @@
-h1 Pages#home
-p Find me in app/views/pages/home.html.slim
+div class="row"
+  div class="six columns"
+    P aijsndajsdoasjd
+  div class="six columns panel callout radius" style="text-align:center"
+    p aksjdkajsdkasjd
+
+div class="row" style="text-align:center; background-color: #e3e3e3"
+  / orbit-wrapper here
+  div class="twelve columns" style="text-align:center" id="featuredContent"
+    div class="row" style="text-align:center"
+      div class="three columns"
+        img src="http://placehold.it/200x200"
+      div class="three columns"
+        img src="http://placehold.it/200x200"
+      div class="three columns"
+        img src="http://placehold.it/200x200"
+      div class="three columns"
+        img src="http://placehold.it/200x200" class="center"
+    div class="row"
+      div class="twelve columns"
+        img src="http://placehold.it/200x200" class="placeholder"
+        img src="http://placehold.it/200x200" class="placeholder"
+        img src="http://placehold.it/200x200" class="placeholder"
+        img src="http://placehold.it/200x200" class="placeholder"
+
+javascript:
+   $(window).load(function() {
+       $('#featuredContent').orbit({ 
+          fluid: '16x6',
+          animation: 'horizontal-push',
+          advanceSpeed: 1000
+        });
+   });
