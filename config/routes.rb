@@ -10,7 +10,8 @@ HackerJr::Application.routes.draw do
   
   resources :companies
 
-
+  match "/:school" => "schools#show", as: "school"
+  resources :schools, except: :show
 
 
   # The priority is based upon order of creation:
